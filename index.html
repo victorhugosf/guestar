@@ -197,8 +197,8 @@
         <a href="#">Contato</a>
     </div>
     <div class="carousel">
-        <img src="https://via.placeholder.com/1200x300" alt="Promoção 1">
-        <img src="https://via.placeholder.com/1200x300" alt="Promoção 2">
+        <img src="https://images.unsplash.com/photo-1555992336-03a23c2c5f90" alt="Promoção de Almoço Especial">
+        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38" alt="Promoção de Jantar Gourmet">
     </div>
     <div class="login-section">
         <h3>Login para Clientes</h3>
@@ -217,7 +217,7 @@
         </div>
         <div class="content">
             <div class="card">
-                <img src="https://via.placeholder.com/100" alt="Imagem Restaurante">
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4" alt="Restaurante Tradicional">
                 <div>
                     <h2>Restaurante Exemplo</h2>
                     <p>Descrição breve do restaurante com localização e horários.</p>
@@ -226,7 +226,7 @@
                 </div>
             </div>
             <div class="card">
-                <img src="https://via.placeholder.com/100" alt="Imagem Restaurante">
+                <img src="https://images.unsplash.com/photo-1565299416187-c94c6a04f0de" alt="Restaurante Moderno">
                 <div>
                     <h2>Outro Restaurante</h2>
                     <p>Descrição breve do restaurante com localização e horários.</p>
@@ -245,52 +245,15 @@
         <a href="#">Facebook</a>
         <a href="#">Instagram</a>
         <a href="#">Twitter</a>
-        <a href="#">LinkedIn</a>
-        <a href="#">YouTube</a>
     </div>
-    <div class="footer">
-        <p>&copy; 2024 Restaurante e Clientes - Todos os direitos reservados.</p>
-    </div>
-    <button class="chatbot" onclick="toggleChatbot()">💬</button>
-    <div class="chatbot-window" id="chatbot-window">
+    <button class="chatbot">💬</button>
+    <div class="chatbot-window">
         <div class="chatbot-header">Chatbot</div>
-        <div class="chatbot-messages" id="chatbot-messages">
-            <p>Olá! Como posso ajudar você hoje?</p>
-        </div>
+        <div class="chatbot-messages"></div>
         <div class="chatbot-input">
-            <input type="text" id="chatbot-input" placeholder="Digite sua mensagem">
-            <button onclick="sendMessage()">Enviar</button>
+            <input type="text" placeholder="Digite sua mensagem">
+            <button>Enviar</button>
         </div>
     </div>
-
-    <script>
-        function toggleChatbot() {
-            const chatbotWindow = document.getElementById('chatbot-window');
-            chatbotWindow.style.display = chatbotWindow.style.display === 'none' || chatbotWindow.style.display === '' ? 'flex' : 'none';
-        }
-
-function sendMessage() {
-    const input = document.getElementById('chatbot-input');
-    const messages = document.getElementById('chatbot-messages');
-    if (input.value.trim() !== '') {
-        const userMessage = document.createElement('p');
-        userMessage.textContent = input.value;
-        userMessage.style.textAlign = 'right';
-        messages.appendChild(userMessage);
-
-        // Respostas básicas
-        const botMessage = document.createElement('p');
-        if (input.value.toLowerCase().includes('promoção')) {
-            botMessage.textContent = 'Atualmente temos 20% de desconto no menu de degustação!';
-        } else if (input.value.toLowerCase().includes('horário')) {
-            botMessage.textContent = 'Nosso restaurante funciona das 10h às 23h.';
-        } else {
-            botMessage.textContent = 'Desculpe, ainda estou aprendendo!';
-        }
-        messages.appendChild(botMessage);
-
-        messages.scrollTop = messages.scrollHeight;
-        input.value = '';
-    }
-}
-
+</body>
+</html>
